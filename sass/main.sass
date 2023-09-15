@@ -1,0 +1,138 @@
+@import "variables"
+@import "plugins"
+
+.Main
+    &__BudgetContainer
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 76rem
+        background-color: #000
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/office.jpg")
+        background-position: center
+        background-attachment: scroll
+        background-repeat: no-repeat
+        background-size: cover
+        @media screen and (max-width: 48rem)
+            height: 100vh
+
+        .BudgetContainer__Title
+            margin-bottom: .5rem
+            font-size: 3rem
+            color: $white-color
+            line-height: 4.5rem
+            letter-spacing: 1px
+            text-align: center
+            text-shadow: 3px 3px 0px $black-color
+            @media screen and (max-width: 48rem)
+                font-size: 1.5rem
+                line-height: 2.5rem
+
+            span
+                font-size: 4rem
+                @media screen and (max-width: 48rem)
+                    font-size: 2rem
+
+        .BudgetContainer__CallToActive--BtnRounded
+            @extend %BtnRounded
+            @media screen and (max-width: 48rem)
+                margin-top: 1rem
+
+    &__ServicesContainer
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 2.5rem 5rem
+        @media screen and (max-width: 62rem)
+            padding: 2.5rem 1rem
+
+        .ServicesContainer__Title
+            @extend %ContainerTitle
+
+        .ServicesContainer__Cards
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            align-items: center
+            justify-content: center
+            gap: 2rem
+            @media screen and (max-width: 48rem)
+                flex-direction: column
+
+            .Cards__Card
+                @extend %Card
+
+                i
+                    font-size: 4rem
+                    color: $first-color
+
+                h3
+                    margin: 2rem 0 .8rem 0
+                    font-size: 1.5rem
+
+                p
+                    color: $third-color
+
+        .ServicesContainer__AboutServices
+            @extend %BtnRounded
+
+            margin-top: 2rem
+
+    &__ProjectsContainer
+        height: max-content
+        padding: 4rem 0
+        background-color: $fourth-color
+        @media screen and (max-width: 48rem)
+            padding: 2rem 0
+
+        .ProjectsContainer__Title
+            @extend %ContainerTitle
+
+        .ProjectsContainer__Contents
+            padding: 0 4rem 2rem 4rem
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 20rem 20rem
+            grid-template-areas: "ProjectOne ProjectTwo ProjectThree" "ProjectOne ProjectFour ProjectFive"
+            gap: 1.5rem
+            @media screen and (max-width: 62rem)
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: 20rem 20rem 20rem
+                grid-template-areas: "ProjectOne ProjectOne" "ProjectTwo ProjectThree" "ProjectFour ProjectFour" "ProjectFive ProjectFive"
+            @media screen and (max-width: 48rem)
+                padding: 0 1rem 2rem 1rem
+                display: flex
+                flex-direction: column
+                gap: 1.5rem
+
+            $variation: One, Two, Three, Four, Five
+
+            @each $variationP in $variation
+                .ProjectsContainer__Project#{$variationP}
+                    @extend %Projects
+
+                    grid-area: Project#{$variationP}
+                    background-image: url("../img/job#{$variationP}.jpg")
+                    &:hover
+                        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../img/job#{$variationP}.jpg")
+                    @media screen and (max-width: 48rem)
+                        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../img/job#{$variationP}.jpg")
+
+                    .Project#{$variationP}__Contents
+                        padding: 4rem 2rem
+                        width: 100%
+                        height: 100%
+                        opacity: 0
+                        transition: opacity .3s
+                        &:hover
+                            opacity: 1
+                        @media screen and (max-width: 48rem)
+                            opacity: 1
+
+                        h3
+                            margin-bottom: 1rem
+                            font-size: 2.5rem
+                            @media screen and (max-width: 48rem)
+                                margin-bottom: .5rem

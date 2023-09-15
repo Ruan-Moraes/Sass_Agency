@@ -1,0 +1,65 @@
+@import "variables"
+
+.Footer
+    padding: 2rem
+    background-color: $fifth-color
+    color: $third-color
+    @media screen and (max-width: 48rem)
+        padding: 2rem 1rem 0 1rem
+    &__Container
+        display: flex
+        flex-direction: row
+        gap: 4rem
+        max-width: 81rem
+        margin: 0 auto
+        @media screen and (max-width: 48rem)
+            flex-direction: column
+            gap: 0
+            width: 100%
+
+        .Container__ContentsAndCopy
+            width: 40%
+            @media screen and (max-width: 48rem)
+                margin-top: 2rem
+                order: 4
+                width: 100%
+                text-align: center
+
+            .ContentsAndCopy__Title
+                margin-bottom: 1rem
+                color: $white-color
+                letter-spacing: 1px
+
+            .ContentsAndCopy__Contents
+                margin-bottom: 6rem
+
+            .ContentsAndCopy__Copy
+                margin-bottom: 1rem
+
+        .Container__Helps
+            width: 30%
+            @media screen and (max-width: 48rem)
+                width: 100%
+                padding: 1rem
+                text-align: center
+                &:nth-child(2)
+                    border-bottom: 1px solid $third-color
+                &:nth-child(3)
+                    border-bottom: 3px solid $third-color
+
+            .Helps__Title
+                margin-bottom: 1rem
+                color: $white-color
+                font-size: 1.2rem
+
+            .Helps__LinksContainer
+                li
+                    margin-bottom: .2rem
+                    @media screen and (max-width: 48rem)
+                        margin-bottom: .8rem
+
+                .Helps__Links
+                    color: $third-color
+                    transition: color .2s
+                    &:hover
+                        color: $fourth-color

@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.header {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #000;
+}
+.header__BrandContainer .BrandContainer__Brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+.header__BrandContainer .BrandContainer__Brand:hover {
+  color: #FF5200;
+}
+.header__BrandContainer .BrandContainer__Brand i {
+  font-size: 2rem;
+}
+.header__BrandContainer .BrandContainer__Brand h1 {
+  font-weight: 300;
+}
+.header__NavigationContainer .NavigationContainer__MenuHamburguer {
+  display: none;
+}
+@media screen and (max-width: 48rem) {
+  .header__NavigationContainer .NavigationContainer__MenuHamburguer {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+  }
+}
+.header__NavigationContainer .NavigationContainer__Menu {
+  display: flex;
+  gap: 1.5rem;
+}
+@media screen and (max-width: 48rem) {
+  .header__NavigationContainer .NavigationContainer__Menu {
+    display: none;
+  }
+}
+.header__NavigationContainer .NavigationContainer__Menu .Menu__Links {
+  font-weight: 300;
+  color: #fff;
+  transition: color 0.3s;
+}
+.header__NavigationContainer .NavigationContainer__Menu .Menu__Links:hover {
+  color: #FF5200;
+}
+.Main__ServicesContainer .ServicesContainer__AboutServices, .Main__BudgetContainer .BudgetContainer__CallToActive--BtnRounded, .header__NavigationContainer .NavigationContainer__Menu .Menu__Links--BtnTwo, .header__NavigationContainer .NavigationContainer__Menu .Menu__Links--Btn {
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  color: #fff;
+  background: #FF5200;
+  border: 1px solid #FF5200;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.Main__ServicesContainer .ServicesContainer__AboutServices:hover, .Main__BudgetContainer .BudgetContainer__CallToActive--BtnRounded:hover, .header__NavigationContainer .NavigationContainer__Menu .Menu__Links--BtnTwo:hover, .header__NavigationContainer .NavigationContainer__Menu .Menu__Links--Btn:hover {
+  color: #FF5200;
+  background-color: transparent;
+}
+
+.header__NavigationContainer .NavigationContainer__Menu .Menu__Links--BtnTwo {
+  background-color: transparent;
+  border-color: #fff;
+}
+.header__NavigationContainer .NavigationContainer__Menu .Menu__Links--BtnTwo:hover {
+  color: #FF5200;
+  border-color: #FF5200;
+}
+
+.Main__ServicesContainer .ServicesContainer__AboutServices, .Main__BudgetContainer .BudgetContainer__CallToActive--BtnRounded {
+  padding: 1rem 1.6rem;
+  border-radius: 999px;
+}
+
+.Main__ServicesContainer .ServicesContainer__Cards .Cards__Card {
+  width: 30%;
+  height: 28rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+  transition: border 0.6s, box-shadow 0.4s linear;
+}
+.Main__ServicesContainer .ServicesContainer__Cards .Cards__Card:hover {
+  border: none;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 62rem) {
+  .Main__ServicesContainer .ServicesContainer__Cards .Cards__Card {
+    height: 30rem;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .Main__ServicesContainer .ServicesContainer__Cards .Cards__Card {
+    width: 100%;
+    height: max-content;
+  }
+}
+
+.Main__ProjectsContainer .ProjectsContainer__Title, .Main__ServicesContainer .ServicesContainer__Title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Title, .Main__ServicesContainer .ServicesContainer__Title {
+    font-size: 2rem;
+  }
+}
+
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne {
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  text-align: center;
+  color: #fff;
+  transition: border 0.1s linear;
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive:hover, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour:hover, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree:hover, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo:hover, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne:hover {
+  border: 4px solid #FF5200;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo, .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne {
+    border: 4px solid #FF5200;
+  }
+}
+
+.Main__BudgetContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 76rem;
+  background-color: #000;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/office.jpg");
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 48rem) {
+  .Main__BudgetContainer {
+    height: 100vh;
+  }
+}
+.Main__BudgetContainer .BudgetContainer__Title {
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  color: #fff;
+  line-height: 4.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 3px 3px 0px #000;
+}
+@media screen and (max-width: 48rem) {
+  .Main__BudgetContainer .BudgetContainer__Title {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+.Main__BudgetContainer .BudgetContainer__Title span {
+  font-size: 4rem;
+}
+@media screen and (max-width: 48rem) {
+  .Main__BudgetContainer .BudgetContainer__Title span {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .Main__BudgetContainer .BudgetContainer__CallToActive--BtnRounded {
+    margin-top: 1rem;
+  }
+}
+.Main__ServicesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 5rem;
+}
+@media screen and (max-width: 62rem) {
+  .Main__ServicesContainer {
+    padding: 2.5rem 1rem;
+  }
+}
+.Main__ServicesContainer .ServicesContainer__Cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ServicesContainer .ServicesContainer__Cards {
+    flex-direction: column;
+  }
+}
+.Main__ServicesContainer .ServicesContainer__Cards .Cards__Card i {
+  font-size: 4rem;
+  color: #FF5200;
+}
+.Main__ServicesContainer .ServicesContainer__Cards .Cards__Card h3 {
+  margin: 2rem 0 0.8rem 0;
+  font-size: 1.5rem;
+}
+.Main__ServicesContainer .ServicesContainer__Cards .Cards__Card p {
+  color: #999;
+}
+.Main__ServicesContainer .ServicesContainer__AboutServices {
+  margin-top: 2rem;
+}
+.Main__ProjectsContainer {
+  height: max-content;
+  padding: 4rem 0;
+  background-color: #E5EAFF;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer {
+    padding: 2rem 0;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents {
+  padding: 0 4rem 2rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20rem 20rem;
+  grid-template-areas: "ProjectOne ProjectTwo ProjectThree" "ProjectOne ProjectFour ProjectFive";
+  gap: 1.5rem;
+}
+@media screen and (max-width: 62rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20rem 20rem 20rem;
+    grid-template-areas: "ProjectOne ProjectOne" "ProjectTwo ProjectThree" "ProjectFour ProjectFour" "ProjectFive ProjectFive";
+  }
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents {
+    padding: 0 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne {
+  grid-area: ProjectOne;
+  background-image: url("../img/jobOne.jpg");
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobOne.jpg");
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobOne.jpg");
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne .ProjectOne__Contents {
+  padding: 4rem 2rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne .ProjectOne__Contents:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne .ProjectOne__Contents {
+    opacity: 1;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne .ProjectOne__Contents h3 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectOne .ProjectOne__Contents h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo {
+  grid-area: ProjectTwo;
+  background-image: url("../img/jobTwo.jpg");
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobTwo.jpg");
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobTwo.jpg");
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo .ProjectTwo__Contents {
+  padding: 4rem 2rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo .ProjectTwo__Contents:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo .ProjectTwo__Contents {
+    opacity: 1;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo .ProjectTwo__Contents h3 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectTwo .ProjectTwo__Contents h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree {
+  grid-area: ProjectThree;
+  background-image: url("../img/jobThree.jpg");
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobThree.jpg");
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobThree.jpg");
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree .ProjectThree__Contents {
+  padding: 4rem 2rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree .ProjectThree__Contents:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree .ProjectThree__Contents {
+    opacity: 1;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree .ProjectThree__Contents h3 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectThree .ProjectThree__Contents h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour {
+  grid-area: ProjectFour;
+  background-image: url("../img/jobFour.jpg");
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobFour.jpg");
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobFour.jpg");
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour .ProjectFour__Contents {
+  padding: 4rem 2rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour .ProjectFour__Contents:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour .ProjectFour__Contents {
+    opacity: 1;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour .ProjectFour__Contents h3 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFour .ProjectFour__Contents h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive {
+  grid-area: ProjectFive;
+  background-image: url("../img/jobFive.jpg");
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobFive.jpg");
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/jobFive.jpg");
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive .ProjectFive__Contents {
+  padding: 4rem 2rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive .ProjectFive__Contents:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive .ProjectFive__Contents {
+    opacity: 1;
+  }
+}
+.Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive .ProjectFive__Contents h3 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 48rem) {
+  .Main__ProjectsContainer .ProjectsContainer__Contents .ProjectsContainer__ProjectFive .ProjectFive__Contents h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.Footer {
+  padding: 2rem;
+  background-color: #1D1D1D;
+  color: #999;
+}
+@media screen and (max-width: 48rem) {
+  .Footer {
+    padding: 2rem 1rem 0 1rem;
+  }
+}
+.Footer__Container {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  max-width: 81rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 48rem) {
+  .Footer__Container {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+}
+.Footer__Container .Container__ContentsAndCopy {
+  width: 40%;
+}
+@media screen and (max-width: 48rem) {
+  .Footer__Container .Container__ContentsAndCopy {
+    margin-top: 2rem;
+    order: 4;
+    width: 100%;
+    text-align: center;
+  }
+}
+.Footer__Container .Container__ContentsAndCopy .ContentsAndCopy__Title {
+  margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.Footer__Container .Container__ContentsAndCopy .ContentsAndCopy__Contents {
+  margin-bottom: 6rem;
+}
+.Footer__Container .Container__ContentsAndCopy .ContentsAndCopy__Copy {
+  margin-bottom: 1rem;
+}
+.Footer__Container .Container__Helps {
+  width: 30%;
+}
+@media screen and (max-width: 48rem) {
+  .Footer__Container .Container__Helps {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+  .Footer__Container .Container__Helps:nth-child(2) {
+    border-bottom: 1px solid #999;
+  }
+  .Footer__Container .Container__Helps:nth-child(3) {
+    border-bottom: 3px solid #999;
+  }
+}
+.Footer__Container .Container__Helps .Helps__Title {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.Footer__Container .Container__Helps .Helps__LinksContainer li {
+  margin-bottom: 0.2rem;
+}
+@media screen and (max-width: 48rem) {
+  .Footer__Container .Container__Helps .Helps__LinksContainer li {
+    margin-bottom: 0.8rem;
+  }
+}
+.Footer__Container .Container__Helps .Helps__LinksContainer .Helps__Links {
+  color: #999;
+  transition: color 0.2s;
+}
+.Footer__Container .Container__Helps .Helps__LinksContainer .Helps__Links:hover {
+  color: #E5EAFF;
+}
+
+/*# sourceMappingURL=styles.css.map */
